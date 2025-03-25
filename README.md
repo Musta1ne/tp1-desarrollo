@@ -1,6 +1,6 @@
 # Portfolio de Desarrollador
 
-Este es mi portfolio personal como desarrollador, creado para la materia **Desarrollo de Software** de la carrera de Ingeniería en Sistemas. El objetivo de este proyecto es mostrar mis habilidades, experiencia y proyectos realizados en un formato visualmente atractivo y accesible.
+Este es un portfolio ficticio como desarrollador, creado para la materia **Desarrollo de Software** de la carrera de Ingeniería en Sistemas. El objetivo de este proyecto es mostrar habilidades, experiencia y proyectos realizados en un formato visualmente atractivo y accesible.
 
 ## Características
 
