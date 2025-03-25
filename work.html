@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="nav_container">
+            <a class="nav_title" href="/">Daveloper</a>
+            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav-list">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/experience.html">Experiencia</a></li>
+                    <li><a href="/work.html">Proyectos</a></li>
+                    <li><a href="/skills.html">Conocimientos</a></li>
+                    <li><a href="/contact.html">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <section class="section_container background">
+        <div class="project_container">
+            <h2>Proyectos</h2>
+            <div class="cards_container">
+                <div class="project_card">
+                    <a rel="noreferrer" target="_blank" href="https://www.netflix.com/">
+                        <img width="300" src="./images/netflix.png" alt="Proyecto lista de tareas">
+                    </a>
+                    <h3>Netflix</h3>
+                    <p>Servicio de streaming que ofrece películas, series y documentales</p>
+                </div>
+                <div class="project_card">
+                    <a rel="noreferrer" target="_blank" href="https://open.spotify.com/">
+                        <img width="300" src="./images/spotify.png" alt="Proyecto panel de control">
+                    </a>
+                    <h3>Spotify</h3>
+                    <p>
+                        Servicio de música, pódcasts y vídeos digitales que te da acceso a millones de canciones y a otro contenido de creadores de todo el mundo
+                    </p>
+                </div>
+                <div class="project_card">
+                    <a rel="noreferrer" target="_blank" href="https://store.steampowered.com/">
+                        <img width="300" src="./images/steam.png" alt="Proyecto chat con socket.io">
+                    </a>
+                    <h3>Steam</h3>
+                    <p>
+                        Plataforma digital que permite comprar y descargar videojuegos, además de chatear con otros usuarios
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="javascript/main.js"></script>
+</body>
