@@ -101,6 +101,7 @@ header {
     border-radius: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 25%;
+    min-width: 160px;
 }
 
 .bio {
@@ -270,6 +271,7 @@ body.dark-mode span {
     flex-direction: column;
     align-items: end;
     gap: 2rem;
+    background-color: rgb(6, 104, 161);
   }
 
   .nav-list {
