@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 p {
     text-wrap: pretty;
 }
@@ -9,17 +29,40 @@ h5,
 h6 {
     text-wrap: balance;
 }
-  
-img {
-    height: auto;
-    max-width: 25%;
+
+ul,
+ol {
+  list-style: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img,
+video,
+svg {
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:active {
+    filter: brightness(90%);
+  }
 
 body {
     font-family: "Winky Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main {
@@ -31,8 +74,18 @@ main {
     gap: 15px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #284df3;
+    color: white;
+    height: 87px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
 .background {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,12 +100,13 @@ main {
 .face_image {
     border-radius: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 25%;
 }
 
 .bio {
     text-align: center;
     max-width: 500px;
-    color: white;
+    color: black;
 }
   
 .bio h1 {
@@ -62,5 +116,176 @@ main {
   
 .bio p {
     font-size: 1.5rem;
-    color: #dadada;
+    color: #0f0e0e;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+  
+.nav_title {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+  
+.nav-list {
+    display: flex;
+    gap: 30px;
+    font-size: 1.1rem;
+}
+  
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode {
+  background-color: #0a0629;
+}
+
+body.dark-mode header {
+  background-color: #0a0629;
+  color: black;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode .nav.nav.visible {
+  background-color: #040940;
+  color: white;
+}
+
+body.dark-mode .nav.visible a {
+  color: white;
+}
+
+body.dark-mode .abrir-menu {
+  color: white;
+}
+
+body.dark-mode .cerrar-menu {
+  color: black;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode .bio,
+body.dark-mode .bio p {
+  color: white;
+}
+
+.theme-toggle {
+  width: 45px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  background-color: lightgray;
+}
+
+.theme-toggle.light {
+  justify-content: start;
+}
+
+.theme-toggle.dark {
+  justify-content: end;
+}
+
+.theme-toggle.light span {
+  background-color: black;
+}
+
+.theme-toggle.dark span {
+  background-color: white;
+}
+
+.theme-toggle span {
+  border-radius: 50%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+.abrir-menu {
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fafafa;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+
+  .nav.visible {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+    gap: 1.2rem;
+  }
+
+  .nav-list a {
+    color: black;
+  }
+
+  .nav-list a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main_container {
+    flex-direction: column;
+  }
 }
